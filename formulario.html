@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>Formulários</title>
+
+        <script>
+            function valida(f){
+                if(f.nome.value==""){
+                    alert("O campo nome não pode estar vazio!");
+                    return false;
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <B>Preencha o formulário e clique no botão Enviar</B>
+        <P><FORM ACTION="Form.html" method="post" onsubmit="return valida(this);">
+            <table border="1" cellpadding="4">
+            <TR>
+                <td>Nome:</td>
+                <td><input type="text" size="45" name="nome"></td>
+            </TR>
+
+            <TR>
+                <td>Sexo:</td>
+                <td>
+                    <input type="Radio" name="Sexo" value="M" checked> Masculino
+                    <input type="Radio" name="Sexo" value="F"> Feminino
+                </td>
+            </TR>
+
+            <tr>
+                <td>Cidade: </td>
+                <td><input type="text" size="20" name="Cidade"></td>
+            </tr>
+
+            <tr>
+                <td>Estado: </td>
+                <td>
+                    <select name="Estado">
+                        <option value="0"> Selecione
+                        <option value="SP"> SP
+                        <option value="RJ"> RJ
+                        <option value="PR"> PR
+                        </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <B>Quais objetos a seguir você gosta?</B>
+                </td>
+            </tr>
+
+            <tr align="center">
+                <td colspan="2">
+                    <input type="checkbox" name="Geladeira" value="GEL"> Geladeira&nbsp;
+                    <input type="checkbox" name="VideoGame" value="VG"> VideoGame&nbsp;
+                    <input type="checkbox" name="Celular" value="CEL"> Celular&nbsp;
+                    <input type="checkbox" name="TV" value="TV"> Televisão&nbsp;
+                </td>
+            </tr>
+
+            <tr>
+                <td>Mensagem:</td>
+                <td><textarea name="Mensagem" rows="4" cols="35"></textarea></td>
+            </tr>
+
+            <tr>
+                <td align="center" colspan="2">
+                    <input type="submit" value="Enviar">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="reset" value="Limpar">
+                </td>
+            </tr>
+            </table>
+        </FORM>
+    </body>
+</html>
